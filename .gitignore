@@ -1,0 +1,27 @@
+# Composer related
+composer.lock
+/vendor
+
+# Frontend assets
+/node_modules
+
+# Logs
+npm-debug.log
+yarn-error.log
+
+# Caches
+.phpunit.cache
+.phpunit.result.cache
+/build
+
+# Editors
+/.idea
+/.fleet
+/.vscode
+
+# Miscellaneous
+phpunit.xml
+phpstan.neon
+testbench.yaml
+/docs
+/coverage

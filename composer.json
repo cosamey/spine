@@ -1,0 +1,65 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "cosamey/hive",
+    "description": "Playful, opinionated starter kit for Laravel packages.",
+    "keywords": ["laravel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chris Teyerl",
+            "email": "chris.teyerl@cosamey.com"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "spatie/laravel-package-tools": "^1.92"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.8",
+        "laravel/pint": "^1.26",
+        "orchestra/testbench": "^10.8",
+        "pestphp/pest": "^4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mey\\Hive\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mey\\Hive\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "vendor/bin/testbench package:discover --ansi"
+        ],
+        "analyse": "phpstan analyse --ansi",
+        "check": [
+            "@analyse",
+            "@format:check",
+            "@test"
+        ],
+        "format": "pint",
+        "format:check": "pint --test",
+        "test": "pest --ci"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mey\\Hive\\HiveServiceProvider"
+            ],
+            "aliases": {
+                "Hive": "Mey\\Hive\\Facades\\Hive"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

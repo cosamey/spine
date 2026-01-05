@@ -1,0 +1,10 @@
+includes:
+    - ./vendor/larastan/larastan/extension.neon
+
+parameters:
+    paths:
+        - config
+        - database
+        - src
+
+    level: 6
