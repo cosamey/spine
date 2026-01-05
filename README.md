@@ -1,3 +1,3 @@
-# Hive
+# Spine
 
-Playful, opinionated starter kit for Laravel packages.
+Pragmatic Laravel foundation package with sensible defaults and reusable conventions.

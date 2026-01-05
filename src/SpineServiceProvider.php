@@ -1,14 +1,14 @@
 <?php
 
-namespace Mey\Hive;
+namespace Mey\Spine;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class HiveServiceProvider extends PackageServiceProvider
+class SpineServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
-        $package->name('hive');
+        $package->name('spine');
     }
 }

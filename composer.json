@@ -1,7 +1,7 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "cosamey/hive",
-    "description": "Playful, opinionated starter kit for Laravel packages.",
+    "name": "cosamey/spine",
+    "description": "Pragmatic Laravel foundation package with sensible defaults and reusable conventions.",
     "keywords": ["laravel"],
     "license": "MIT",
     "authors": [
@@ -22,12 +22,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Mey\\Hive\\": "src/"
+            "Mey\\Spine\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Mey\\Hive\\Tests\\": "tests/"
+            "Mey\\Spine\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -47,10 +47,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Mey\\Hive\\HiveServiceProvider"
+                "Mey\\Spine\\SpineServiceProvider"
             ],
             "aliases": {
-                "Hive": "Mey\\Hive\\Facades\\Hive"
+                "Spine": "Mey\\Spine\\Facades\\Spine"
             }
         }
     },

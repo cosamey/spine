@@ -1,13 +1,13 @@
 <?php
 
-namespace Mey\Hive\Facades;
+namespace Mey\Spine\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Hive extends Facade
+class Spine extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \Mey\Hive\Hive::class;
+        return \Mey\Spine\Spine::class;
     }
 }
