@@ -2,6 +2,7 @@
 
 namespace Mey\Spine\Http\Middleware;
 
+use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Http\Request;
 use Mey\Spine\Concerns\TracksLastPresence;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,8 +16,11 @@ class TrackLastPresence
     {
         $user = $request->user();
 
-        if ($user && in_array(TracksLastPresence::class, class_uses_recursive($user), true)) {
-            /** @var mixed $user */
+        if (
+            $user instanceof Authenticatable
+            && method_exists($user, 'markAsActive')
+            && in_array(TracksLastPresence::class, class_uses_recursive($user), true)
+        ) {
             defer(function () use ($user): void {
                 $user->markAsActive();
             });
