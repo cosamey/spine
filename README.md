@@ -1,3 +1,3 @@
 # Spine
 
-Pragmatic Laravel foundation package with sensible defaults and reusable conventions.
+Pragmatic Laravel foundation package with reusable conventions, helpers and AI skills.

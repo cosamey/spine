@@ -1,7 +1,7 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
     "name": "cosamey/spine",
-    "description": "Pragmatic Laravel foundation package with sensible defaults and reusable conventions.",
+    "description": "Pragmatic Laravel foundation package with reusable conventions, helpers and AI skills.",
     "keywords": ["laravel"],
     "license": "MIT",
     "authors": [
